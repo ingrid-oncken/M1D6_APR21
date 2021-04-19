@@ -1,0 +1,234 @@
+<!-- <html>
+  <p>
+    You have been assigned to the creation of a Smartphone Shop Website. The
+    homepage you're about to write is just a showcase of the products of the
+    shop with some extra information. No shopping cart / checkout features are
+    required.
+  </p>
+
+  <p>Complete exercises from 1 to 6 with just plain HTML.</p>
+
+  <p>EX1.: Add an h1 tag with the name of your shop</p>
+  <p>EX2.: Add a TABLE with the top 5 products of your shop</p>
+  <p>
+    EX3.: Insert for each product an image, a title, a description and a price
+  </p>
+  <p>EX4.: Add links to existing Amazon products for each item in the table</p>
+  <p>EX5.: Add a footer with the address and the name of your shop</p>
+  <p>
+    EX6.: Add a message board where the user can type a message in it (no real
+    posting/saving features required!)
+  </p>
+
+  <p>EXTRA (use JavaScript code here)</p>
+
+  <p>EX7.: Write a function to change the h1 text</p>
+  <p>EX8.: Write a function to change the page background color</p>
+  <p>EX9.: Write a function to change the footer address with a fake one</p>
+  <p>EX10.: Write a function to add a CSS class to every Amazon link</p>
+  <p>
+    EX11: Write a function to toggle a CSS class for all the images in the
+    table; that class should set the visibility of the image
+  </p>
+  <p>
+    EX12: Write a function to color the price of each product in a different one
+    every time it's invoked
+  </p>
+
+  <head></head>
+  <body></body>
+</html>
+ -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ingrid's Phone House</title>
+    <style>
+      table,
+      td {
+        border: 1px solid #333;
+        text-align: center;
+      }
+
+      thead {
+        background-color: #333;
+        color: #fff;
+      }
+      tfoot {
+        background-color: gray;
+      }
+      h1,
+      footer {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      h4 {
+        display: inline;
+      }
+
+      a {
+        color: #fff;
+      }
+
+      table {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      label {
+        display: block;
+        text-align: center;
+      }
+      div {
+        text-align: center;
+      }
+
+      input,
+      label {
+        margin: 0.4rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ingrid's Phone House</h1>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="5">Top 5 products of this shop!</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <h4>Phone 1</h4>
+          </td>
+          <td>
+            <h4>Phone 2</h4>
+          </td>
+          <td>
+            <h4>Phone 3</h4>
+          </td>
+          <td>
+            <h4>Phone 4</h4>
+          </td>
+          <td>
+            <h4>Phone 5</h4>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://dummyimage.com/150" />
+          </td>
+          <td>
+            <img src="https://dummyimage.com/150" />
+          </td>
+          <td>
+            <img src="https://dummyimage.com/150" />
+          </td>
+          <td>
+            <img src="https://dummyimage.com/150" />
+          </td>
+          <td>
+            <img src="https://dummyimage.com/150" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Product description:</p>
+          </td>
+          <td>
+            <p>Product description:</p>
+          </td>
+          <td>
+            <p>Product description:</p>
+          </td>
+          <td>
+            <p>Product description:</p>
+          </td>
+          <td>
+            <p>Product description:</p>
+          </td>
+        </tr>
+        <tr>
+          <td>Price: 599€</td>
+          <td>Price: 599€</td>
+          <td>Price: 599€</td>
+          <td>Price: 599€</td>
+          <td>Price: 599€</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <td>
+          <a
+            href="https://www.amazon.de/New-Apple-iPhone-12-Pro/dp/B08L5V26P6?ref_=ast_sto_dp"
+            target="_blank"
+            >Buy on Amazon</a
+          >
+        </td>
+        <td>
+          <a
+            href="https://www.amazon.de/New-Apple-iPhone-12-Pro/dp/B08L5V26P6?ref_=ast_sto_dp"
+            target="_blank"
+            >Buy on Amazon</a
+          >
+        </td>
+        <td>
+          <a
+            href="https://www.amazon.de/New-Apple-iPhone-12-Pro/dp/B08L5V26P6?ref_=ast_sto_dp"
+            target="_blank"
+            >Buy on Amazon</a
+          >
+        </td>
+        <td>
+          <a
+            href="https://www.amazon.de/New-Apple-iPhone-12-Pro/dp/B08L5V26P6?ref_=ast_sto_dp"
+            target="_blank"
+            >Buy on Amazon</a
+          >
+        </td>
+        <td>
+          <a
+            href="https://www.amazon.de/New-Apple-iPhone-12-Pro/dp/B08L5V26P6?ref_=ast_sto_dp"
+            target="_blank"
+            >Buy on Amazon</a
+          >
+        </td>
+      </tfoot>
+    </table>
+    <footer>
+      <p>
+        <em><strong>Ingrid's Phone House</strong></em>
+        <br />
+        Silves - Faro, Portugal
+      </p>
+    </footer>
+    <form action="">
+      <div>
+        <label for="name"
+          ><strong>Any questions? Live us a message: </strong><br />
+        </label>
+        <input type="text" required minlength="4" maxlength="500" size="40" />
+      </div>
+      <div>
+        <button>Send</button>
+      </div>
+    </form>
+    <script>
+      //EX7.: Write a function to change the h1 text
+      const newH1 = function () {
+        return (document.getElementsByTagName(
+          "h1"
+        ).innerHTML = `New Title of the SHOP`); // no idea why it isn't working
+      };
+      newH1();
+
+      //EX8.: Write a function to change the page background color
+      const newBg = function () {
+        let body = document.getElementsByTagName("body");
+        return (body.style.backgroundcolor = pink);
+      };
+    </script>
+  </body>
+</html>
