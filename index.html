@@ -201,8 +201,8 @@
       <p>
         <em><strong>Ingrid's Phone House</strong></em>
         <br />
-        Silves - Faro, Portugal
       </p>
+      <p id="p-address">Silves - Faro, Portugal</p>
     </footer>
     <form action="">
       <div>
@@ -218,17 +218,36 @@
     <script>
       //EX7.: Write a function to change the h1 text
       const newH1 = function () {
-        return (document.getElementsByTagName(
+        document.getElementsByTagName(
           "h1"
-        ).innerHTML = `New Title of the SHOP`); // no idea why it isn't working
+        )[0].innerHTML = `New Title of the SHOP`; // no idea why it isn't working
       };
       newH1();
 
       //EX8.: Write a function to change the page background color
       const newBg = function () {
-        let body = document.getElementsByTagName("body");
-        return (body.style.backgroundcolor = pink);
+        document.querySelector("body").style.backgroundColor = "edfffe";
       };
+      newBg();
+
+      //EX9.: Write a function to change the footer address with a fake one
+      const newAddress = function () {
+        document.getElementById("p-address").innerHTML =
+          "This new fake address is in NYC where I would like to go today 🇺🇸";
+      };
+      newAddress();
+
+      //EX10.: Write a function to add a CSS class to every Amazon link
+      const newClasses4Links = function () {
+        let getA = document.getElementsByTagName("a"); //getA will storte an array with a links
+
+        for (i = 0; i < getA.legth; i++) {
+          //this will cycle the elements inside the array getA
+          getA[i].classList.add("amazon-link"); //this line will add the class 'amazon-link' to every element cycled
+        }
+      };
+      newClasses4Links();
+      console.log(newClasses4Links());
     </script>
   </body>
 </html>
